@@ -3,7 +3,7 @@ import { SafeAreaView, Animated, StyleSheet, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { WebView } from 'react-native-webview';
 
-const userAgent = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
+const userAgent = "Mozilla/5.0 (Linux; Android 13; SM-G988B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36" // Samsung Galaxy S20 Ultra 5G - Android 13 - Chrome Mobile 111
 
 const App = () => {
     const fadeAnim = useRef(new Animated.Value(1)).current;
