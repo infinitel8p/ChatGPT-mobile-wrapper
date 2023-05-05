@@ -47,6 +47,8 @@ const App = () => {
                         source={{ uri: 'https://chat.openai.com' }}
                         userAgent={userAgent}
                         sharedCookiesEnabled={true}
+                        thirdPartyCookiesEnabled={true}
+                        cacheEnabled={true}
                     />
                     <Animated.View style={[
                         StyleSheet.absoluteFill,
