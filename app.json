@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ChatGPT-mobile-wrapper",
+    "name": "ChatGPT Mobile",
     "slug": "ChatGPT-mobile-wrapper",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,8 +19,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#10a37f"
       },
       "jsEngine": "jsc",
       "package": "com.infinitel8p.ChatGPTmobilewrapper"
