@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { SafeAreaView, Animated, StyleSheet, Image } from 'react-native';
+import { Animated, Image, SafeAreaView, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { WebView } from 'react-native-webview';
-
-const userAgent = "Mozilla/5.0 (Linux; Android 13; SM-G988B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36" // Samsung Galaxy S20 Ultra 5G - Android 13 - Chrome Mobile 111
+import CustomWebView from './components/CustomWebView';
 
 const App = () => {
     const fadeAnim = useRef(new Animated.Value(1)).current;
@@ -30,11 +28,7 @@ const App = () => {
             <>
                 <StatusBar style="light" backgroundColor="#343541" translucent={false} />
                 <SafeAreaView style={{ flex: 1 }}>
-                    <WebView
-                        source={{ uri: 'https://chat.openai.com' }}
-                        userAgent={userAgent}
-                        sharedCookiesEnabled={true}
-                    />
+                    <CustomWebView />
                 </SafeAreaView>
             </>
         );
@@ -43,13 +37,7 @@ const App = () => {
             <>
                 <StatusBar style="light" backgroundColor="#343541" translucent={false} />
                 <SafeAreaView style={{ flex: 1 }}>
-                    <WebView
-                        source={{ uri: 'https://chat.openai.com' }}
-                        userAgent={userAgent}
-                        sharedCookiesEnabled={true}
-                        thirdPartyCookiesEnabled={true}
-                        cacheEnabled={true}
-                    />
+                    <CustomWebView />
                     <Animated.View style={[
                         StyleSheet.absoluteFill,
                         {
@@ -60,7 +48,7 @@ const App = () => {
                         },
                     ]}>
                         <Image
-                            source={require('./assets/splash.png')}
+                            source={require('./assets/splash_1.png')}
                             resizeMode="contain"
                             style={{
                                 width: '100%',
